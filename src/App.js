@@ -3,7 +3,6 @@ import "./App.css";
 
 function App() {
   const [url, setUrl] = useState("");
-  // Nosso novo estado de progresso! É um objeto para mais flexibilidade.
   const [progress, setProgress] = useState({ active: false, message: "" });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -67,7 +66,7 @@ function App() {
     } catch (err) {
       console.error("Erro ao baixar:", err);
       setError(
-        `Falha no download: ${err.message}. Verifique a URL e o console do backend.`
+        `Falha no download: ${err.message}. Verifique se sua internet é a FEMA Alunos.`
       );
     } finally {
       // Limpa o progresso ao finalizar
