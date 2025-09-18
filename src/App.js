@@ -31,7 +31,9 @@ function App() {
       });
 
       const response = await fetch(
-        `http://localhost:3001/download?url=${encodeURIComponent(url)}`
+        `${process.env.REACT_APP_API_URL}/download?url=${encodeURIComponent(
+          url
+        )}`
       );
 
       if (!response.ok) {
