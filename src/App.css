@@ -1,0 +1,124 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.App-header {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+}
+
+h1 {
+  color: #c4302b; /* Cor do YouTube */
+  margin-bottom: 15px;
+}
+
+p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #c4302b;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #c4302b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #a02824;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.loading-message {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.success-message {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.progress-container {
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.progress-message {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden; /* Garante que a barra interna não saia das bordas arredondadas */
+}
+
+.progress-bar-inner {
+  width: 100%;
+  height: 100%;
+  background-color: #c4302b;
+  border-radius: 4px;
+  animation: progress-indeterminate 2s infinite linear;
+}
+
+/* Animação que faz a barra deslizar */
+@keyframes progress-indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
